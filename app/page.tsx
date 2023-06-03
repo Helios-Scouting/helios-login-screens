@@ -53,7 +53,7 @@ export default function IndexPage() {
           <div className="relative z-20 mt-auto">
             <blockquote className="space-y-2">
               <p className="text-lg">
-                &ldquo;"Me in terra, Helios in caelo"&rdquo;
+                "Me in terra, Helios in caelo"
               </p>
               <footer className="text-sm font-bold">Fun fact of the week:</footer>
               <footer className="text-sm">Helios is the Greek god of the sun.</footer>

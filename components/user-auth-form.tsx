@@ -6,6 +6,9 @@ import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
+import { FcGoogle } from "react-icons/fc"
+import {BsMicrosoft} from "react-icons/bs"
+import {AiFillGithub} from "react-icons/ai"
 
 interface UserAuthFormProps extends React.HTMLAttributes<HTMLDivElement> {}
 
@@ -23,7 +26,7 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
 
   return (
     <div className= {cn("grid gap-6", className)} {...props}>
-      <form onSubmit={onSubmit}>
+      {/* <form onSubmit={onSubmit}>
         <div className="grid gap-2">
           <div className="grid gap-1">
             <Label className="sr-only" htmlFor="email">
@@ -44,8 +47,8 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
             Sign In with Email
           </Button>
         </div>
-      </form>
-      <div className="relative">
+      </form> */}
+      {/* <div className="relative">
         <div className="absolute inset-0 flex items-center">
           <span className="w-full border-t" />
         </div>
@@ -54,10 +57,25 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
             Or continue with
           </span>
         </div>
+      </div> */}
+      <div>
+        <p>
+          <span className="text-muted-foreground">In the near future we will add compativility with personal email. For the time being we only support the next methods:</span>{" "}
+        </p>
       </div>
       <Button variant="outline" type="button" disabled={isLoading}>
-        {" "}
-        Github
+        <FcGoogle style={{ marginRight: '5px' }} />
+        Sign In with Google
+      </Button>
+
+      <Button variant="outline" type="button" disabled={isLoading}>
+        <BsMicrosoft style={{ marginRight: '5px' }} />
+        Sign In with Microsoft
+      </Button>
+
+      <Button variant="outline" type="button" disabled={isLoading}>
+        <AiFillGithub style={{ marginRight: '5px' }} />
+        Sign In with Github
       </Button>
     </div>
   )
